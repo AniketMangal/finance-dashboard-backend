@@ -26,6 +26,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 /* ROUTES */
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
+
 app.use("/kpi", kpiRoutes);
 app.use("/product", productRoutes);
 app.use("/transaction", transactionRoutes);
